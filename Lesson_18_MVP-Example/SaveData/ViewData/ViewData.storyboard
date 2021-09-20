@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1t2-l7-yzn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Data View Controller-->
+        <scene sceneID="rpV-mr-Pav">
+            <objects>
+                <viewController storyboardIdentifier="ViewDataViewController" id="1t2-l7-yzn" customClass="ViewDataViewController" customModule="Lesson_18_MVP_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dHv-Ld-GZd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daR-6e-wpe">
+                                <rect key="frame" x="16" y="437.5" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3V-36-KOi">
+                                <rect key="frame" x="133" y="466.5" width="148" height="30"/>
+                                <state key="normal" title="Стереть и вернуться"/>
+                                <connections>
+                                    <action selector="buttonPressed2" destination="1t2-l7-yzn" eventType="touchUpInside" id="owo-ms-nfP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lO1-Lq-3c2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g3V-36-KOi" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="48U-4g-qQ5"/>
+                            <constraint firstItem="g3V-36-KOi" firstAttribute="top" secondItem="daR-6e-wpe" secondAttribute="bottom" constant="8" id="Dgw-o6-Vk3"/>
+                            <constraint firstItem="daR-6e-wpe" firstAttribute="centerY" secondItem="dHv-Ld-GZd" secondAttribute="centerY" id="E8b-To-9Z0"/>
+                            <constraint firstItem="lO1-Lq-3c2" firstAttribute="trailing" secondItem="daR-6e-wpe" secondAttribute="trailing" constant="16" id="IDV-m2-dmM"/>
+                            <constraint firstItem="daR-6e-wpe" firstAttribute="centerX" secondItem="dHv-Ld-GZd" secondAttribute="centerX" id="Y2T-FS-NJO"/>
+                            <constraint firstItem="daR-6e-wpe" firstAttribute="leading" secondItem="lO1-Lq-3c2" secondAttribute="leading" constant="16" id="ncZ-Sg-nub"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="daR-6e-wpe" id="Wn9-0S-cci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7B-uH-bVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="89"/>
+        </scene>
+    </scenes>
+</document>

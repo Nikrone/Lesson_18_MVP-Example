@@ -15,6 +15,9 @@
 		71B4760326F8EBC200409218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B4760126F8EBC200409218 /* LaunchScreen.storyboard */; };
 		71B4760B26F8EC5F00409218 /* SaveDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4760A26F8EC5F00409218 /* SaveDataPresenter.swift */; };
 		71B4760D26F8F45F00409218 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4760C26F8F45F00409218 /* Constants.swift */; };
+		71B4761A26F8FF3E00409218 /* ViewData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B4761726F8FF3E00409218 /* ViewData.storyboard */; };
+		71B4761B26F8FF3E00409218 /* ViewDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4761826F8FF3E00409218 /* ViewDataPresenter.swift */; };
+		71B4761C26F8FF3E00409218 /* ViewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B4761926F8FF3E00409218 /* ViewDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		71B4760426F8EBC200409218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71B4760A26F8EC5F00409218 /* SaveDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDataPresenter.swift; sourceTree = "<group>"; };
 		71B4760C26F8F45F00409218 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71B4761726F8FF3E00409218 /* ViewData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewData.storyboard; sourceTree = "<group>"; };
+		71B4761826F8FF3E00409218 /* ViewDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataPresenter.swift; sourceTree = "<group>"; };
+		71B4761926F8FF3E00409218 /* ViewDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +68,34 @@
 			children = (
 				71B475F626F8EBC100409218 /* AppDelegate.swift */,
 				71B475F826F8EBC100409218 /* SceneDelegate.swift */,
-				71B475FA26F8EBC100409218 /* SaveDataViewController.swift */,
-				71B4760A26F8EC5F00409218 /* SaveDataPresenter.swift */,
+				71B4761526F8FF0E00409218 /* SaveData */,
 				71B4760C26F8F45F00409218 /* Constants.swift */,
-				71B475FC26F8EBC100409218 /* Main.storyboard */,
 				71B475FF26F8EBC200409218 /* Assets.xcassets */,
 				71B4760126F8EBC200409218 /* LaunchScreen.storyboard */,
 				71B4760426F8EBC200409218 /* Info.plist */,
 			);
 			path = "Lesson_18_MVP-Example";
+			sourceTree = "<group>";
+		};
+		71B4761526F8FF0E00409218 /* SaveData */ = {
+			isa = PBXGroup;
+			children = (
+				71B475FA26F8EBC100409218 /* SaveDataViewController.swift */,
+				71B4760A26F8EC5F00409218 /* SaveDataPresenter.swift */,
+				71B475FC26F8EBC100409218 /* Main.storyboard */,
+				71B4761626F8FF1A00409218 /* ViewData */,
+			);
+			path = SaveData;
+			sourceTree = "<group>";
+		};
+		71B4761626F8FF1A00409218 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				71B4761726F8FF3E00409218 /* ViewData.storyboard */,
+				71B4761826F8FF3E00409218 /* ViewDataPresenter.swift */,
+				71B4761926F8FF3E00409218 /* ViewDataViewController.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B4761A26F8FF3E00409218 /* ViewData.storyboard in Resources */,
 				71B4760326F8EBC200409218 /* LaunchScreen.storyboard in Resources */,
 				71B4760026F8EBC200409218 /* Assets.xcassets in Resources */,
 				71B475FE26F8EBC100409218 /* Main.storyboard in Resources */,
@@ -147,7 +173,9 @@
 				71B475FB26F8EBC100409218 /* SaveDataViewController.swift in Sources */,
 				71B475F726F8EBC100409218 /* AppDelegate.swift in Sources */,
 				71B475F926F8EBC100409218 /* SceneDelegate.swift in Sources */,
+				71B4761C26F8FF3E00409218 /* ViewDataViewController.swift in Sources */,
 				71B4760B26F8EC5F00409218 /* SaveDataPresenter.swift in Sources */,
+				71B4761B26F8FF3E00409218 /* ViewDataPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-//MVP - 
+//MVP - не зависим от UIKit!
 //Presenter-НЕ должен знать UI элементы!
 //Протокол содержит в себе функцию, но не содержит ее логику!
 
@@ -16,16 +15,29 @@ protocol SaveDataPresenterProtocol {
     var view: SaveDataViewProtocol? { get set }
     
     func viewDidLoad()
-    func saveStrinToUserDefaults (string: String)
+    func saveStringToUserDefaults (string: String)
+   
+    
 }
 
-class SaveDataPresenter : SaveDataPresenterProtocol {
+protocol SaveDataPresenterDelegate: AnyObject {
+    func clearStringFromUserDefaults()
+}
+
+class SaveDataPresenter : SaveDataPresenterProtocol, SaveDataPresenterDelegate {
     weak var view: SaveDataViewProtocol?
+    
     func viewDidLoad() {
     }
     
-    func saveStrinToUserDefaults (string: String) {
+    func saveStringToUserDefaults (string: String) {
         UserDefaults.standard.setValue(string, forKey: Consants.stringKey)
+        view?.showNextScreen(with: string, delegate: self)
+    }
+    
+    func clearStringFromUserDefaults()  {
+        UserDefaults.standard.removeObject(forKey: Consants.stringKey)
+        view?.clearTextField()
     }
     
 }
